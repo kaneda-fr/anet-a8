@@ -137,7 +137,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "Kan Printer 1.1"
+#define CUSTOM_MACHINE_NAME "Kan Printer 1.2"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -722,7 +722,7 @@
 //
 // Use Junction Deviation instead of traditional Jerk Limiting
 //
-//#define JUNCTION_DEVIATION
+#define JUNCTION_DEVIATION
 #if ENABLED(JUNCTION_DEVIATION)
   #define JUNCTION_DEVIATION_MM 0.02  // (mm) Distance from real junction edge
 #endif
@@ -1158,12 +1158,12 @@
 
   // Set the boundaries for probing (where the probe can reach).
   #define LEFT_PROBE_BED_POSITION MIN_PROBE_EDGE
-  #define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - 10 - (MIN_PROBE_EDGE))
+  #define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - MIN_PROBE_EDGE)
   //#define FRONT_PROBE_BED_POSITION MIN_PROBE_EDGE
-  #define BACK_PROBE_BED_POSITION (Y_BED_SIZE - 10 - (MIN_PROBE_EDGE))
+  #define BACK_PROBE_BED_POSITION (Y_BED_SIZE - 10 - MIN_PROBE_EDGE)
   //#define LEFT_PROBE_BED_POSITION 30
   //#define RIGHT_PROBE_BED_POSITION 195
-  #define FRONT_PROBE_BED_POSITION 53
+  #define FRONT_PROBE_BED_POSITION 43
   //#define BACK_PROBE_BED_POSITION 205
 
   // Probe along the Y axis, advancing X after each column
